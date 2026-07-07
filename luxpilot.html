@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LuxPilot — Governed LLM Advisory System</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="hero">
+<nav class="nav">
+<a href="index.html" class="brand">Larisa Somova / Malkovskaya</a>
+<div class="nav-links">
+<a href="luxpilot.html">LuxPilot</a>
+<a href="partynest.html">PartyNest</a>
+<a href="research.html">Research</a>
+<a href="writing.html">Writing</a>
+<a href="cv.html">CV</a>
+</div>
+</nav>
+<div class="hero-inner">
+<h1>LuxPilot — Governed LLM Advisory System</h1>
+<p class="tagline">A governed AI advisory system that separates deterministic routing from probabilistic generation.</p>
+</div>
+</header>
+
+<main class="container">
+<section>
+<h2>What it is</h2>
+<p>LuxPilot is a governed LLM-powered advisory system for Luxembourg microenterprises. It helps small business owners translate messy business context into feasible, explainable marketing action plans while respecting real constraints such as capacity, trust, budget, language, and execution burden.</p>
+<p>The system is designed as both a commercial AI product and a research-grade evaluation instrument.</p>
+</section>
+
+<section>
+<h2>Why it matters</h2>
+<p>Generic LLM advice is fluent, but it is often not governable. It may recommend actions that sound impressive but exceed the user's capacity, ignore feasibility constraints, or change behavior silently when the model or prompt changes.</p>
+<p>LuxPilot addresses this by separating the system into three layers: versioned domain knowledge; deterministic, LLM-free governance logic; and model-agnostic LLM execution contracts. The LLM can extract, explain, and generate. It does not choose the strategic route.</p>
+</section>
+
+<section>
+<h2>Architecture</h2>
+<p>LuxPilot's target architecture separates the deterministic and probabilistic parts of the system.</p>
+<p><strong>Layer 1</strong> contains versioned domain knowledge: variables, campaign families, feasibility gates, constraints, templates, question banks, and language rules.</p>
+<p><strong>Layer 2</strong> contains the deterministic routing engine. It evaluates confirmed profile snapshots against versioned rules and gates. It produces traceable, replayable routing results.</p>
+<p><strong>Layer 3</strong> contains model-agnostic LLM execution contracts for extraction, inference, boundary interpretation, explanation, generation, and adaptive questioning.</p>
+<div class="diagram">User input → confirmation → immutable snapshot → deterministic routing → LLM generation → validation → audit/replay</div>
+</section>
+
+<section>
+<h2>Deterministic / Probabilistic Boundary</h2>
+<p>Everything that enters the routing engine must be frozen, confirmed, and hashed. LLM outputs can only enter the system as candidates awaiting confirmation or drafts awaiting validation.</p>
+<p>This design prevents the model from silently replacing the governance logic. It also makes routing decisions auditable and reproducible.</p>
+</section>
+
+<section>
+<h2>Evaluation and Reproducibility</h2>
+<p>LuxPilot is designed around evaluation from the start:</p>
+<ul class="list">
+<li>immutable profile snapshots;</li>
+<li>rule-base versioning;</li>
+<li>golden-trace fixtures;</li>
+<li>same-input-same-output tests;</li>
+<li>audit logs for routing executions and LLM calls;</li>
+<li>replay contract: snapshot hash + rule-base version + engine build → output hash;</li>
+<li>validation events for user confirmations and generated assets.</li>
+</ul>
+<p>The goal is not only to produce useful advice, but to make the system's behavior inspectable, testable, and governable.</p>
+</section>
+
+<section>
+<h2>What changed from the beta</h2>
+<p>The beta proved the product flow, but it was not reproducible enough for research-grade evaluation. The rebuild moves routing out of frontend code, replaces hard-coded rules with versioned rules-as-data, decomposes a monolithic prompt into contracted LLM functions, introduces profile snapshot immutability, and replaces funnel analytics with audit/replay infrastructure.</p>
+</section>
+
+<section>
+<h2>Current status</h2>
+<p>Live demo available. Public technical case study and sanitized GitHub evaluation repository are in progress.<span class="status">In progress</span></p>
+</section>
+
+<section>
+<h2>Links</h2>
+<p class="links">Live demo &middot; Demo video &middot; Architecture diagram &middot; Public specification &middot; GitHub case study &middot; Thesis / proposal</p>
+</section>
+</main>
+
+<footer class="footer">
+<p>&copy; 2026 Larisa Somova / Malkovskaya &middot; <a href="index.html">Home</a></p>
+</footer>
+</body>
+</html>
