@@ -4,4 +4,4 @@ Personal website and portfolio: governed AI systems, model evaluation, and human
 
 Live site: https://larisaamalkovskaya.github.io/
 
-Contact: larisaamalkovskaya@gmail.com
+Contact: larisamalkovskaya@gmail.com
